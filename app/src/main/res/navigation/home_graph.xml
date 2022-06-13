@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_graph"
     app:startDestination="@id/homeFragment">
 
@@ -16,6 +17,9 @@
             app:popEnterAnim="@anim/pop_enter"
             app:popExitAnim="@anim/pop_exit"
             app:popUpTo="@+id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
     </fragment>
     <fragment
         android:id="@+id/movieDetailFragment"
@@ -25,4 +29,9 @@
             android:name="mostPopularMovies"
             app:argType="com.neflis.neflis.core.models.mostPopularMovies.MostPopularMovie" />
     </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.neflis.neflis.ui.fragments.home.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" />
 </navigation>
